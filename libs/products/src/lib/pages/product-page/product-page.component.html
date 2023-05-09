@@ -1,0 +1,30 @@
+<div class="product-page" *ngIf="product">
+  <div class=" grid">
+    <div class="col-6">
+      <eshop-gallery  [images]="product.images" ></eshop-gallery> 
+     </div>
+    <div class=" col-6 product">
+      <h2 class="product-name">{{ product.name }}</h2>
+      <p class="product-desc">
+        {{ product.description }}
+      </p>
+       
+      
+      <div class="product-actions">
+        <button
+          pButton
+          pRipple
+          type="button"
+          label="Like"
+          class="p-button-rounded p-mr-2"
+        ></button>
+        
+      </div>
+    </div>
+  </div>
+  <div class="grid product-rich-desc">
+    <div class=" col-12">
+      <div [innerHTML]="product.richDescription"></div>
+    </div>
+  </div>
+</div>
